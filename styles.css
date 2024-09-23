@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+:root {
+    --blue: #0044ff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #0066ff;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #0066ff;
+    --secondary: #6c757d;
+    --background:#d8ebef;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --black: #000;
+    --font-family:"Libre Baskerville", serif;
+}
+*{
+    font-family: var(--font-family);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+.header{
+    display:flex;
+    width: 100%;
+    height: 80px;
+    padding: 0.5em;
+    justify-content: space-between;
+    background-color: var(--cyan);
+    position: fixed;
+    z-index: 1;
+    align-items: center;
+}
+
+.navbar-brand img{
+    margin:0 80px;
+    height: 56px;
+    width: auto;
+    cursor: pointer;   
+    transition: transform .5s ease-in-out; 
+    filter: drop-shadow(5px 5px 5px #000);
+    /* will-change:auto; */
+}
+
+.navbar-brand img:hover{
+    transform: scale(1.1);
+}
+
+.navigator ul li{
+    padding: 0 20px;
+    display: inline;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigator ul li a{
+    padding: 0.5em;
+    font-size: 18px;
+    font-weight: 300;
+    position: relative; 
+    color: var(--white);
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease; 
+}
+
+.navigator ul li a:hover{
+    font-size: 20px; 
+    color: #00AFEA;
+    text-shadow: 2px 2px 10px rgba(56, 32, 145, 0.2); 
+}
+main{
+    background-color: var(--background);
+}
+.container{
+    padding:0 10em;
+    margin: 10em 2em;
+}
+
+.container-first-image{
+    height: 80vh;
+    display:block;
+    width: auto;
+    background-image: linear-gradient(to bottom, #0006, #000c), url('images/CortedeApelaciones.png');
+    background-size: cover;
+    background-attachment: fixed;
+    border-end-end-radius: 25px;
+    border-bottom-left-radius: 25px;
+    box-shadow: 4px 3px 10px #000c;
+    transition: all 1s ease-in-out;
+}
+.text-section {
+    height: 100%;
+    width: 600px;
+    text-align: justify;
+}
+
+.text{
+    color:var(--white);
+    padding:4em 0 0 1em;
+}
+.title-first-image{
+    font-size:40px;
+}
+.parragraft-first-image{
+    padding-left: 2em;
+}
+
+.button-follow-grid{
+    padding: 2em 5em 0 5em;
+    display: flex;
+    justify-content: center;
+}
+
+.button-follow-grid i{
+    font-size: 60px;
+    color:#05f;
+    animation: moveUpDown 2s ease-in-out infinite;
+}
+.grid-container{
+    height: 20em;
+    margin:10em 0 ;
+    display:grid;
+    grid-template-columns: repeat(4, minmax(150px,1fr)); 
+    gap:20px;
+}
+.grid-item{
+    height: 10em;
+    border-end-end-radius: 50px;
+    border-top-left-radius: 50px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 5px 5px 10px #000c;
+}
+.grid-item a{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+    color:white;
+    background-image: linear-gradient(to bottom, #0001, #000a), url('images/Imagen-grilla.jpg');
+    background-size: cover;
+    transition: all .2s ease-in;
+    position:relative;
+
+}
+
+.grid-item p{
+    font-size:1.1em;
+    font-weight: bold;
+    position:absolute;
+    bottom:10px;
+    text-align: center;
+    margin:0;
+}
+
+
+.grid-item a:hover{
+   background-image: linear-gradient(to bottom, #05a5, #000a), url('images/Imagen-grilla.jpg');
+   transform: scale(1.05);
+}
+
+
+@keyframes moveUpDown{
+    0%{translate: 0 0;}
+    50%{translate: 0 100%;}
+    100%{translate: 0 0;}
+}
+
